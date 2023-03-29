@@ -12,7 +12,7 @@ class Role:
 
     @property
     def actors(self):
-        return [a.actor for a in self.auditions]
+        return [a.actor.name for a in self.auditions]
     
     @property
     def locations(self):

@@ -11,5 +11,14 @@ class Actor:
     
 
     @property
-    def roles(self):
-        return [a.role for a in self.auditions]
+    def roles( self ):
+        return [ a.role.character_name for a in self.auditions ]
+
+    @property
+    def characters( self ):
+        return [ a.role.character_name for a in self.auditions ]
+
+    @property
+    def paychecks( self ):
+        return [ a.role.character_name for a in self.auditions if a.hired == True ]
+    
